@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  geoserver:
+    build: ./djangoref_geoserver
+    volumes:
+      - ./djangoref_geoserver/data_dir:${GEOSERVER_DATA_DIR}
+    env_file:
+      - ./.env
+    ports:
+      - 8080:8080
+    depends_on:
+      - web
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/public_html/djangoref/static/
+    ports:
+      - 1337:80
+    depends_on:
+      - web
+  db:
+    build: ./djangoref_db
+    volumes:
+      - ./djangoref_db/postgres-data:/var/lib/postgresql/data
+    env_file:
+      - ./.env
+  web:
+    build: .
+    expose:
+      - 49155
+    command: gunicorn -b 0.0.0.0:49155 -c /public_html/djangoref/djangoref/gunicorn_conf.py djangoref.wsgi
+    env_file:
+      - ./.env
+    volumes:
+      - static_volume:/public_html/djangoref/static/
+    depends_on:
+      - db
+
+volumes:  
+  static_volume:

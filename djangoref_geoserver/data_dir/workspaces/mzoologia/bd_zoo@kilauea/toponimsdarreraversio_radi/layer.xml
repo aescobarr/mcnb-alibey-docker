@@ -1,0 +1,16 @@
+<layer>
+  <name>toponimsdarreraversio_radi</name>
+  <id>LayerInfoImpl-40d16f92:17cbcaf5ca2:-7ffa</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-40d16f92:17cbcaf5ca2:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-40d16f92:17cbcaf5ca2:-7ffb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-10-26 13:16:25.43 UTC</dateCreated>
+</layer>

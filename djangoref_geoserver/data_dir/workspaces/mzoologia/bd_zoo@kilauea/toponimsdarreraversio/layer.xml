@@ -1,0 +1,17 @@
+<layer>
+  <name>toponimsdarreraversio</name>
+  <id>LayerInfoImpl--806e8c4:17c975713f7:-7ffe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-40d16f92:17cbcaf5ca2:-7fff</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--806e8c4:17c975713f7:-7fff</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-10-19 07:02:04.800 UTC</dateCreated>
+  <dateModified>2021-10-26 13:16:39.333 UTC</dateModified>
+</layer>
