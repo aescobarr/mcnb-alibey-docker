@@ -1,0 +1,3 @@
+[submodule "djangoref"]
+	path = djangoref
+	url = https://github.com/aescobarr/nhc-georef.git
