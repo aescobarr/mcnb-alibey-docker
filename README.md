@@ -5,16 +5,16 @@ Dockerized version of the [Ali-bey georeferencing database](https://github.com/a
 
 In the docker-compose.yml file, we define the following services:
 
-web - The main container, it runs the django app through a gunicorn server
-db - The database container. It hosts a PostgreSQL instance with all the app data.
-nginx - The web server. It proxies all traffic back and forth to the gunicorn instance, also serves the django static resources.
-geoserver - A geoserver container, which runs a GeoServer instance inside a Tomcat container
+* web - The main container, it runs the django app through a gunicorn server
+* db - The database container. It hosts a PostgreSQL instance with all the app data.
+* nginx - The web server. It proxies all traffic back and forth to the gunicorn instance, also serves the django static resources.
+* geoserver - A geoserver container, which runs a GeoServer instance inside a Tomcat container
 
 Also, the following volumes:
 
-static-volume - A volume containing all the django static resources
-geoserver-data-dir - A volume containing the Geoserver data directory
-postgres-data - A volume which contains all the database files
+* static-volume - A volume containing all the django static resources
+* geoserver-data-dir - A volume containing the Geoserver data directory
+* postgres-data - A volume which contains all the database files
 
 ## Getting Started
 
