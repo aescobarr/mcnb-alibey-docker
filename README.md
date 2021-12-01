@@ -1,4 +1,4 @@
-# ALI-BEY DOCKER
+# Ali-Bey Docker
 Dockerized version of the [Ali-bey georeferencing database](https://github.com/aescobarr/mcnb-alibey).
 
 ## General structure
