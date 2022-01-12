@@ -33,6 +33,8 @@ COPY conf/web.xml /tmp/web.xml
 COPY conf/context.xml /tmp/context.xml
 COPY conf/datastore.xml /tmp/datastore.xml
 COPY entrypoint.sh /tmp/entrypoint.sh 
+COPY var/log4j-1.2.17.norce.jar /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/log4j-1.2.17.norce.jar
+RUN rm /usr/local/tomcat/webapps/geoserver/WEB-INF/lib/log4j-1.2.17.jar
 
 RUN chmod +x /tmp/entrypoint.sh
 
