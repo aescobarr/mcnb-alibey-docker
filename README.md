@@ -8,21 +8,21 @@ In the docker-compose.yml file, we define the following services:
 * web - The main container, it runs the django app through a gunicorn server
 * db - The database container. It hosts a PostgreSQL instance with all the app data.
 * nginx - The web server. It proxies all traffic back and forth to the gunicorn instance, also serves the django static resources.
-* geoserver - A geoserver container, which runs a GeoServer instance inside a Tomcat container
+* geoserver - A Web Map Service container, which runs a [GeoServer](http://geoserver.org) instance inside a [Tomcat](https://tomcat.apache.org) container
 
 Also, the following volumes:
 
 * static-volume - A volume containing all the django static resources
-* geoserver-data-dir - A volume containing the Geoserver data directory
-* postgres-data - A volume which contains all the database files
+* geoserver-data-dir - A volume containing the GeoServer data directory
+* postgres-data - A volume which contains all the PostgreSQL data files
 
 ## Getting Started
 
-These instructions will help you set up this project on a Linux system. It assumes [Git](https://git-scm.com/) is installed and running in the host machine.
+These instructions will help you set up this project on a Linux system. It assumes [Git](https://git-scm.com/) is installed in the host machine.
 
 ### Prerequisites
 
-The host machine needs a [Docker](https://docs.docker.com/get-docker/) working install. This version has been tested on Docker v20.10.2.
+The host machine needs a running [Docker](https://docs.docker.com/get-docker/) engine. This version of Ali-Bey has been tested on Docker v20.10.2.
 
 ### Installing
 
@@ -100,14 +100,19 @@ BING_MAPS_API_KEY='my_bings_api_key'
 ```
 
 
-Finally, the remaining thing to do is build the docker images and run:
+Finally, the remaining thing to do is build the docker images:
 
 ```bash
 docker-compose build
+```
+
+And run them:
+
+```bash
 docker-compose up
 ```
 
-This should build and start all the images. The app is exposed via the following address:
+This should build and start all the containers from the images. The app is exposed via the following address:
 
 ```bash
 http:127.0.0.1:1337
